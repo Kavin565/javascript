@@ -501,7 +501,7 @@ let ans=""
 answer[0].PostOffice.forEach(element=>{
     ans+=element.Name+"\n"
     let textnode = document.createElement("li");
-    textnode.textContent=element.Name
+    textnode.textContent+=element.Name
     final.appendChild(textnode)
     console.log(element.Name)})
 
@@ -526,11 +526,17 @@ if(checkbox2.checked)
 throw new Error("Please enter correct input");
         }
 let answer1 =await districtinput.json();
-// let areadescription=JSON.stringify(answer1);
 answer1[0].PostOffice.forEach(element=>{
-
+    
+    let textnode = document.createElement("li");
+    textnode.textContent+=element.Description
+    final.appendChild(textnode)
     console.log(element.Description)})
-// let descrip=areadescription.Name;
+
+// let areadescription=JSON.stringify(answer1);
+// answer1[0].PostOffice.forEach(element=>{
+//     console.log(element.Description)})
+// // let descrip=areadescription.Name;
 // result+=descrip;
 // final.textContent+=result;
 // console.log(final)
@@ -551,11 +557,18 @@ if(checkbox3.checked)
 throw new Error("Please enter correct input");
         }
 let answer2 =await districtinput.json();
-// let branch=JSON.stringify(answer2);
 answer2[0].PostOffice.forEach(element=>{
+    // ans+=element.Name+"\n"
+    let textnode = document.createElement("li");
+    textnode.textContent+=element.BranchType
+    final.appendChild(textnode)
+    console.log(element.BranchType)})
 
-    console.log(element.BranchType)
-})
+// let branch=JSON.stringify(answer2);
+// answer2[0].PostOffice.forEach(element=>{
+
+//     console.log(element.BranchType)
+// })
 // let type=branch.PostOffice.Name;
 // result+=type;
 // final.textContent+=result;
